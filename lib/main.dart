@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:http/http.dart';
+import 'package:http/http.dart';
 import 'package:users_http_unit_test/user_model.dart';
 import 'package:users_http_unit_test/user_repository.dart';
 
@@ -32,8 +32,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  // Future<User> getUsers = UserRepository(Client()).getUser();
-  Future<User> getUsers = UserRepository().getUser();
+  Future<User> getUsers = UserRepository(Client()).getUser();
 
   @override
   Widget build(BuildContext context) {
