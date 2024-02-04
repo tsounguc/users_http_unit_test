@@ -21,7 +21,7 @@ void main() {
     ];
 
     Future<List<User>> mockFetchUsers() async {
-      return users;
+      return Future.delayed(const Duration(seconds: 1), ()=> users);
     }
 
     await tester.pumpWidget(
@@ -32,7 +32,7 @@ void main() {
       ),
     );
     expect(find.byType(CircularProgressIndicator), findsOneWidget);
-    await tester.pump();
+    await tester.pumpAndSettle();
     expect(find.byType(ListView), findsOneWidget);
   });
 }
