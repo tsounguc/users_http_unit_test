@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:users_http_unit_test/user_model.dart';
-import 'package:users_http_unit_test/user_repository.dart';
 
 class HomeScreen extends StatefulWidget {
   final Future<List<User>> futureUsers;
