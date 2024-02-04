@@ -35,7 +35,10 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.byType(ListView), findsOneWidget);
     expect(find.byType(ListTile), findsNWidgets(users.length));
+    for(final user in users){
+      expect(find.text(user.name), findsOneWidget);
+      expect(find.text(user.email), findsOneWidget);
+    }
 
-    
   });
 }
